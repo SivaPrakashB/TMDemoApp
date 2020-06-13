@@ -14,6 +14,7 @@
 		2F537A812494D56E008800FC /* TMDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F537A802494D56E008800FC /* TMDemoAppTests.swift */; };
 		2F537A8C2494D56E008800FC /* TMDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F537A8B2494D56E008800FC /* TMDemoAppUITests.swift */; };
 		2F537A9A2494D693008800FC /* DetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F537A992494D693008800FC /* DetailListViewController.swift */; };
+		2F537A9D2494D783008800FC /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F537A9C2494D783008800FC /* TableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2F537A8B2494D56E008800FC /* TMDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDemoAppUITests.swift; sourceTree = "<group>"; };
 		2F537A8D2494D56E008800FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F537A992494D693008800FC /* DetailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListViewController.swift; sourceTree = "<group>"; };
+		2F537A9C2494D783008800FC /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		2F537A9B2494D6A1008800FC /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				2F537A9C2494D783008800FC /* TableCell.swift */,
 				2F537A992494D693008800FC /* DetailListViewController.swift */,
 			);
 			path = MVVM;
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F537A9D2494D783008800FC /* TableCell.swift in Sources */,
 				2F537A9A2494D693008800FC /* DetailListViewController.swift in Sources */,
 				2F537A6A2494D56C008800FC /* AppDelegate.swift in Sources */,
 			);
