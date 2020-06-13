@@ -36,6 +36,7 @@ class DetailListViewController: UIViewController {
     }()
     
     var detailListViewModel:DetailListViewModel!
+    var displayCells = 4
     var totalCount = 0
     
     override func viewDidLoad() {
@@ -78,6 +79,7 @@ class DetailListViewController: UIViewController {
         
         DispatchQueue.main.async {
         self.totalCount = self.detailListViewModel.detailList.rows.count
+        self.paginationCondition()
         self.refreshControl.endRefreshing()
         self.navigationItem.title = self.detailListViewModel.detailList.title
         if self.totalCount == 0{
@@ -95,6 +97,18 @@ class DetailListViewController: UIViewController {
         
         }
     }
+    
+    //pagination check
+    func paginationCondition(){
+        if self.totalCount == 4 || self.totalCount < 4{
+            self.displayCells = self.totalCount        }
+    }
+    
+    //Refresh Action
+    @objc func handleRefresh(){
+        fetchDetails()
+    }
+    
     //Show alert message
     func alertMessage(message:String?){
         let alert = UIAlertController(title: "Alert", message: message ?? "", preferredStyle: .alert)
@@ -120,14 +134,19 @@ extension DetailListViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
-    @objc func handleRefresh(){
-        fetchDetails()
-    }
-    
+   
 }
 extension DetailListViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-            
+        print(displayCells,totalCount)
+        if totalCount > displayCells && ((tableView.indexPathsForVisibleRows?.first?.row)! + (tableView.indexPathsForVisibleRows?.last?.row)!)/2 == displayCells-3{
+             displayCells = displayCells + 4
+            if displayCells > totalCount{
+            displayCells = totalCount
+            }
+            DispatchQueue.main.async {
+            tableView.reloadData()
+            }
+        }
     }
 }
