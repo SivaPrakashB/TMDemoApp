@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2F537A6A2494D56C008800FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F537A692494D56C008800FC /* AppDelegate.swift */; };
-		2F537A6C2494D56C008800FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F537A6B2494D56C008800FC /* SceneDelegate.swift */; };
-		2F537A6E2494D56C008800FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F537A6D2494D56C008800FC /* ViewController.swift */; };
 		2F537A712494D56C008800FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F537A6F2494D56C008800FC /* Main.storyboard */; };
 		2F537A732494D56E008800FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F537A722494D56E008800FC /* Assets.xcassets */; };
 		2F537A762494D56E008800FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F537A742494D56E008800FC /* LaunchScreen.storyboard */; };
 		2F537A812494D56E008800FC /* TMDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F537A802494D56E008800FC /* TMDemoAppTests.swift */; };
 		2F537A8C2494D56E008800FC /* TMDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F537A8B2494D56E008800FC /* TMDemoAppUITests.swift */; };
+		2F537A9A2494D693008800FC /* DetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F537A992494D693008800FC /* DetailListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +36,6 @@
 /* Begin PBXFileReference section */
 		2F537A662494D56C008800FC /* TMDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F537A692494D56C008800FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F537A6B2494D56C008800FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2F537A6D2494D56C008800FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2F537A702494D56C008800FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F537A722494D56E008800FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F537A752494D56E008800FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +46,7 @@
 		2F537A872494D56E008800FC /* TMDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F537A8B2494D56E008800FC /* TMDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDemoAppUITests.swift; sourceTree = "<group>"; };
 		2F537A8D2494D56E008800FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F537A992494D693008800FC /* DetailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +97,8 @@
 		2F537A682494D56C008800FC /* TMDemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				2F537A9B2494D6A1008800FC /* MVVM */,
 				2F537A692494D56C008800FC /* AppDelegate.swift */,
-				2F537A6B2494D56C008800FC /* SceneDelegate.swift */,
-				2F537A6D2494D56C008800FC /* ViewController.swift */,
 				2F537A6F2494D56C008800FC /* Main.storyboard */,
 				2F537A722494D56E008800FC /* Assets.xcassets */,
 				2F537A742494D56E008800FC /* LaunchScreen.storyboard */,
@@ -126,6 +123,14 @@
 				2F537A8D2494D56E008800FC /* Info.plist */,
 			);
 			path = TMDemoAppUITests;
+			sourceTree = "<group>";
+		};
+		2F537A9B2494D6A1008800FC /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				2F537A992494D693008800FC /* DetailListViewController.swift */,
+			);
+			path = MVVM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F537A6E2494D56C008800FC /* ViewController.swift in Sources */,
+				2F537A9A2494D693008800FC /* DetailListViewController.swift in Sources */,
 				2F537A6A2494D56C008800FC /* AppDelegate.swift in Sources */,
-				2F537A6C2494D56C008800FC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +440,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TMDemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +458,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TMDemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
